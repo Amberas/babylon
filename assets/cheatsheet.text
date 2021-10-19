@@ -1,0 +1,17 @@
+var delayCreateScene = function () {
+
+    var scene = new BABYLON.Scene(engine);
+
+    BABYLON.SceneLoader.ImportMesh(
+        "",
+        "https://dl.dropbox.com/s/nyk8j3fk3hyep88/classroom.gltf?dl=0",
+        "classroom.gltf",
+        scene,
+        function (meshes) {
+            scene.createDefaultCameraOrLight(true, true, true);
+            scene.createDefaultEnvironment();
+        }
+    );
+
+    return scene;
+};
